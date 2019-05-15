@@ -24,7 +24,8 @@ function drawTable(data){
 	"	<th>description</th>" +
   	"	<th>releaseYear</th>" +
   	"	<th>Action</th>" +
-  	"	<th>Action</th>" +
+  	"	<th>Action</th>" 
+  	+
   	"</tr>"+
   	" </thead>";
   	
