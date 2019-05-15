@@ -57,6 +57,7 @@ public class AppRestController {
 		return status;
 	}
 	
+	@CrossOrigin(origins = "*")
 	@RequestMapping(value="/getFilmById",method=RequestMethod.GET)
 	public filmBean editFilm(@RequestParam Integer filmId) { //@RequestParam ใช้กับ get
 		Film film = filmRepos.getOne(filmId);	
