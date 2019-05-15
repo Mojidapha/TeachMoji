@@ -1,0 +1,30 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+
+</head>
+<body>
+
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script> <!-- เป็นการเรียก libs jquery -->
+	<script>
+		var filmId = [[${filmId}]];
+	</script> 
+	<script th:src="@{~/moji/edit.js}"></script> 
+	
+		title: <input type="text" id="title" /><br>
+		description: <input type="text" id="description" /><br>
+		releaseYear: <input type="text" id="releaseYear" /><br>
+		languageId: <input type="text" id="languageId" /><br>
+		originalLanguageId: <input type="text" id="originalLanguageId" /><br>
+		rentalDuration: <input type="text" id="rentalDuration" /><br>
+		rentalRate: <input type="text" id="rentalRate" /><br>
+		length: <input type="text" id="length" /><br>
+		replacementCost: <input type="text" id="replacementCost" /><br>
+		rating: <input type="text" id="rating" /><br>
+		specialFeatures: <input type="text" id="specialFeatures" /><br>
+		
+		<button onclick="editFilm();">submit</button>
+		
+</body>
+</html>

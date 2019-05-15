@@ -1,0 +1,45 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+
+</head>
+<body>
+
+	<p th:text="${greeting}"></p> <!-- เป็นให้ text ของ tag นี้ มีค่ามาจากที่เรา model.addAttribute("greeting",words); -->
+	
+	<table>
+  		<tr>
+  			<td>filmId</td> <!-- เป็นส่วนหัวข้อของตาราง -->
+  			<td>title</td>
+  			<td>description</td>
+  			<td>releaseYear</td>
+  			<td>languageId</td>
+  			<td>originalLanguageId</td>
+  			<td>rentalDuration</td>
+  			<td>rentalRate</td>
+  			<td>length</td>
+  			<td>replacementCost</td>
+  			<td>rating</td>
+  			<td>specialFeatures</td>
+  			<td>lastUpdate</td>
+  		</tr>
+  		<tr th:each="e : ${filmList}"> <!-- เป็นการวน loop เนื่องจากตอนแรกเราเก็บข้อมูลลงใน list -->
+    		<td><p th:text="${e.filmId}"></p></td> <!-- ตัวแปล e ที่กำหนด ก็เหมือนค่า i เพื่อเรียกเข้าถึงค่า เช่นจากอันนี้ หากเราปริ้นค่า e ออกมาเฉยๆจะได้ข้อมูลออกมาเป็นก้อนโดยเป็นเลขมั่วๆ -->
+    		<td><p th:text="${e.title}"></p></td>
+    		<td><p th:text="${e.description}"></p></td>
+    		<td><p th:text="${e.releaseYear}"></p></td>
+    		<td><p th:text="${e.languageId}"></p></td>
+    		<td><p th:text="${e.originalLanguageId}"></p></td>
+    		<td><p th:text="${e.rentalDuration}"></p></td>
+    		<td><p th:text="${e.rentalRate}"></p></td>
+    		<td><p th:text="${e.length}"></p></td>
+    		<td><p th:text="${e.replacementCost}"></p></td>
+    		<td><p th:text="${e.rating}"></p></td>
+    		<td><p th:text="${e.specialFeatures}"></p></td>
+    		<td><p th:text="${e.lastUpdate}"></p></td>
+  		</tr>
+	</table>
+	
+</body>
+</html>
